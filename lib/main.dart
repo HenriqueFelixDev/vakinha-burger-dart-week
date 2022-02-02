@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
 import 'app/app_widget.dart';
 
-void main() => runApp(const AppWidget());
+Future<void> main() async {
+  await GetStorage.init();
+  runApp(const AppWidget());
+}

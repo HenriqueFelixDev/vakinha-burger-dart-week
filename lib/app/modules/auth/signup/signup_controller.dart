@@ -1,7 +1,9 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
+import '../../../core/constants/app_constants.dart';
 import '../../../core/rest_client/rest_client.dart';
 import '../../../core/models/messages/messages.dart';
 import '../../../core/repositories/iauth_repository.dart';
@@ -34,14 +36,8 @@ class SignUpController extends GetxController with LoaderMixin, MessageMixin {
       final user = await _authRepository.signUp(name, email, password);
       _isLoading.toggle();
 
-      Get.back();
-      _message(
-        MessageModel(
-          title: 'Sucesso',
-          message: 'Usuário criado com sucesso',
-          type: MessageType.info
-        )
-      );
+      final storage = GetStorage();
+      storage.write(AppConstants.USER_KEY, user.id);
     } on RestClientException catch (e, s) {
       _isLoading.toggle();
 

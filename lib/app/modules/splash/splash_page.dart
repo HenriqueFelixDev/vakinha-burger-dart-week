@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constants/app_images.dart';
-import '../../../core/constants/app_routes.dart';
-import '../../../widgets/app_button/app_button_widget.dart';
+import 'splash_controller.dart';
+import '../../core/constants/app_images.dart';
+import '../../widgets/app_button/app_button_widget.dart';
 
-class SplashPage extends StatefulWidget {
+class SplashPage extends GetView<SplashController> {
   const SplashPage({ Key? key }) : super(key: key);
 
-  @override
-  _SplashPageState createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +30,7 @@ class _SplashPageState extends State<SplashPage> {
 
                 AppButtonWidget(
                   child: const Text('Acessar'),
-                  onPressed: () => Get.offAndToNamed(AppRoutes.login)
+                  onPressed: () => controller.checkLogin()
                 )
               ]
             ),

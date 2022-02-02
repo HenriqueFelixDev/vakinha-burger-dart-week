@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'modules/home/home_router.dart';
 import 'modules/auth/auth_router.dart';
-import 'modules/splash/splash_routers.dart';
+import 'modules/splash/splash_router.dart';
 import 'core/theme/app_theme/app_theme_interface.dart';
 import 'core/bindings/application_bindings.dart';
 import 'core/theme/app_theme/app_light_theme.dart';
@@ -19,8 +20,9 @@ class AppWidget extends StatelessWidget {
       initialBinding: ApplicationBindings(),
       theme: appTheme.getThemeData(),
       getPages: [
-        ...SplashRouters.pages,
-        ...AuthRouter.pages
+        ...SplashRouter.pages,
+        ...AuthRouter.pages,
+        ...HomeRouter.pages
       ]
     );
   }
