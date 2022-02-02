@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '../../core/extensions/app_theme_extension.dart';
+import '../../core/theme/app_theme/app_theme_interface.dart';
 
 class TextFieldWidget extends StatelessWidget {
   final String label;
@@ -20,20 +21,22 @@ class TextFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appTheme = Get.find<AppThemeInterface>();
 
     final fieldBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(23.0),
-      borderSide: BorderSide(color: context.appColors.border)
+      borderSide: BorderSide(color: appTheme.colors.border)
     );
 
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
+      validator: validator,
       decoration: InputDecoration(
         isDense: true,
         filled: true,
-        fillColor: context.appColors.background,
-        label: Text(label, style: context.appTextStyles.body),
+        fillColor: appTheme.colors.background,
+        label: Text(label, style: appTheme.textStyles.body),
         border: fieldBorder,
         enabledBorder: fieldBorder,
         focusedBorder: fieldBorder,

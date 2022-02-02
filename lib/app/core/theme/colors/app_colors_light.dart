@@ -1,5 +1,4 @@
-import 'dart:ui';
-
+import 'package:flutter/material.dart';
 import 'app_colors_interface.dart';
 
 class AppColorsLight implements AppColorsInterface {
@@ -44,6 +43,12 @@ class AppColorsLight implements AppColorsInterface {
 
   @override
   Color get onError => const Color(0xFFFFFFFF);
+
+  @override
+  Color get info => const Color(0xFF5555DD);
+
+  @override
+  Color get onInfo => const Color(0xFFFFFFFF);
 
   @override
   Color get success => const Color(0xFF3CEE98);

@@ -17,6 +17,9 @@ abstract class AppColorsInterface {
   Color get error;
   Color get onError;
 
+  Color get info;
+  Color get onInfo;
+
   Color get success;
   Color get onSuccess;
 
