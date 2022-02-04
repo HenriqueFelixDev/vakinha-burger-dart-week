@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'menu_controller.dart';
 import 'widgets/product_card_widget.dart';
+import '../../core/constants/app_routes.dart';
 
 class MenuPage extends GetView<MenuController> {
   const MenuPage({ Key? key }) : super(key: key);
@@ -20,7 +21,7 @@ class MenuPage extends GetView<MenuController> {
 
             return ProductCardWidget(
               product: product,
-              onPressed: () {}
+              onPressed: () => Get.toNamed(AppRoutes.productDetails, arguments: product)
             );
           }
         )

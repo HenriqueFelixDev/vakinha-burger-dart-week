@@ -56,6 +56,13 @@ class AppLightTheme implements AppThemeInterface {
           primary: colors.primary,
           shape: const StadiumBorder()
         )
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          primary: colors.primary,
+          shape: const StadiumBorder(),
+          side: BorderSide(width: 1.0, color: colors.primary)
+        )
       )
     );
   }

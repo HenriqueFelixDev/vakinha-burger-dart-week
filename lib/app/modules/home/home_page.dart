@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'home_controller.dart';
 import '../../core/ui/vakinha_state.dart';
+import '../../widgets/icon_badge/icon_badge_widget.dart';
 import '../../widgets/app_bar/app_bar_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,16 +27,21 @@ class _HomePageState extends VakinhaState<HomePage, HomeController> {
         return BottomNavigationBar(
           onTap: (page) => controller.tabIndex = page,
           currentIndex: controller.tabIndex,
-          items: const [
-            BottomNavigationBarItem(
+          items: [
+            const BottomNavigationBarItem(
               icon: Icon(Icons.list),
               label: 'Menu'
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
+              icon: Obx(() =>
+                IconBadgeWidget(
+                  icon: Icons.shopping_cart,
+                  quantity: controller.shoppingCartProductsCount,
+                )
+              ),
               label: 'Carrinho'
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.exit_to_app),
               label: 'Sair'
             ),

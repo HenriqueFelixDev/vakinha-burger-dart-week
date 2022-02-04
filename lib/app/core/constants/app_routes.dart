@@ -9,4 +9,6 @@ class AppRoutes {
   static const signUp = authPath + '/signup';
 
   static const home = '/home';
+
+  static const productDetails = '/product-details';
 }

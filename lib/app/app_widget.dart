@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'modules/home/home_router.dart';
 import 'modules/auth/auth_router.dart';
 import 'modules/splash/splash_router.dart';
+import 'modules/details/details_router.dart';
 import 'core/theme/app_theme/app_theme_interface.dart';
 import 'core/bindings/application_bindings.dart';
 import 'core/theme/app_theme/app_light_theme.dart';
@@ -22,7 +23,8 @@ class AppWidget extends StatelessWidget {
       getPages: [
         ...SplashRouter.pages,
         ...AuthRouter.pages,
-        ...HomeRouter.pages
+        ...HomeRouter.pages,
+        ...DetailsRouter.pages
       ]
     );
   }
