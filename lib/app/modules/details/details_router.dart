@@ -10,7 +10,7 @@ class DetailsRouter {
     GetPage(
       name: AppRoutes.productDetails,
       binding: DetailsBinding(),
-      page: () => DetailsPage()
+      page: () => const DetailsPage()
     )
   ];
 }

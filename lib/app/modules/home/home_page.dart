@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'home_controller.dart';
 import '../../core/ui/vakinha_state.dart';
+import '../../core/constants/app_routes.dart';
 import '../../widgets/icon_badge/icon_badge_widget.dart';
 import '../../widgets/app_bar/app_bar_widget.dart';
 
@@ -19,7 +20,7 @@ class _HomePageState extends VakinhaState<HomePage, HomeController> {
     return Scaffold(
       appBar: AppBarWidget(),
       body: Navigator(
-        initialRoute: '/menu',
+        initialRoute: AppRoutes.menu,
         key: Get.nestedKey(HomeController.NAVIGATOR_KEY),
         onGenerateRoute: controller.onGenerateRoute
       ),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:vakinha_burguer/app/core/utils/formatter_utils.dart';
-import 'package:vakinha_burguer/app/widgets/circle_button/circle_button_widget.dart';
+import 'package:get/get.dart';
+
+import '../../core/theme/app_theme/app_theme_interface.dart';
+import '../../core/utils/formatter_utils.dart';
+import '../../widgets/circle_button/circle_button_widget.dart';
 
 class ProductQuantityWidget extends StatelessWidget {
   final int quantity;
@@ -17,6 +20,8 @@ class ProductQuantityWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyles = Get.find<AppThemeInterface>().textStyles;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -40,7 +45,10 @@ class ProductQuantityWidget extends StatelessWidget {
           ]
         ),
         
-        Text(FormatterUtils.formatCurrency(price)),
+        Text(
+          FormatterUtils.formatCurrency(price),
+          style: textStyles.textBold
+        ),
       ]
     );
   }
