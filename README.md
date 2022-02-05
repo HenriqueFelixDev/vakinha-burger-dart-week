@@ -1,16 +1,26 @@
-# vakinha_burguer
+<div style="display: inline-flex; gap: 1rem;">
 
+![Stars](https://img.shields.io/github/stars/HenriqueFelixDev/vakinha-burger-dart-week?style=badge)
+
+![Forks](https://img.shields.io/github/forks/HenriqueFelixDev/vakinha-burger-dart-week?style=badge)
+
+![Stars](https://img.shields.io/github/watchers/HenriqueFelixDev/vakinha-burger-dart-week?style=badge)
+
+</div>
+
+# Vakinha Burger :hamburger:
 Aplicativo de delivery desenvolvido na dart week
 
-## Getting Started
+![Logo](./assets/images/logo-1x.png)
 
-This project is a starting point for a Flutter application.
+## Sumário
+ - [Sobre o Aplicativo](#sobre-o-aplicativo)
+ - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
-A few resources to get you started if this is your first Flutter project:
+## Sobre o Aplicativo
+O VakinhaBurger é um aplicativo de delivery em que o usuário pode adicionar produtos ao carrinho de compras e ao finalizar o pedido é possível realizar o pagamento por PIX.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Tecnologias Utilizadas
+Toda a construção do aplicativo foi feita em cima do package [GetX](https://pub.dev/packages/get) que contém state management, rest client (GetConnect), local storage (GetStorage, um package à parte), utilitários e diversos outros facilitadores para o projeto.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+O backend utilizado foi feito em shelf, utilizando o próprio Dart e conta com autenticação, consulta de produtos e criação de pedidos.
