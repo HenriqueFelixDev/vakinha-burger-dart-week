@@ -1,12 +1,6 @@
-<div style="display: inline-flex; gap: 1rem;">
-
 ![Stars](https://img.shields.io/github/stars/HenriqueFelixDev/vakinha-burger-dart-week?style=badge)
-
 ![Forks](https://img.shields.io/github/forks/HenriqueFelixDev/vakinha-burger-dart-week?style=badge)
-
 ![Stars](https://img.shields.io/github/watchers/HenriqueFelixDev/vakinha-burger-dart-week?style=badge)
-
-</div>
 
 # Vakinha Burger :hamburger:
 Aplicativo de delivery desenvolvido na dart week
